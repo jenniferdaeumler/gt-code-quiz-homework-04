@@ -6,6 +6,14 @@
 // 5. Submit button 
 // 6. High score list shows with that name
 
+//On Click for beginButton to start quiz
+// var beginButton = document.querySelector("#beginButton");
+
+// beginButton.addEventListener("click", function(){
+//     if
+// })
+// console.log("Begin Button Clicked");
+
 //Quiz timer
 var timerEl = document.querySelector(".time");
 var buzzerEl = document.getElementById("buzzer");
@@ -22,10 +30,11 @@ function setTime() {
     }
 
   }, 1000);
-  console.log("Timer started.");
+  console.log("Timer started.")
 }
 function sendMessage() {
   timerEl.textContent = "Time has expired.";
+  //IF time expires THEN go to score page?
   console.log("Time expired.");
 }
 setTime(); 
