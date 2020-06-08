@@ -6,6 +6,14 @@
 // 5. Submit button 
 // 6. High score list shows with that name
 
+//On Click for beginButton to start quiz
+// var beginButton = document.querySelector("#beginButton");
+
+// beginButton.addEventListener("click", function(){
+//     if
+// })
+// console.log("Begin Button Clicked");
+
 //Quiz timer
 var timerEl = document.querySelector(".time");
 var buzzerEl = document.getElementById("buzzer");
