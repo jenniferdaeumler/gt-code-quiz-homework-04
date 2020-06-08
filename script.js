@@ -22,10 +22,11 @@ function setTime() {
     }
 
   }, 1000);
-  console.log("Timer started.");
+  console.log("Timer started.")
 }
 function sendMessage() {
   timerEl.textContent = "Time has expired.";
+  //IF time expires THEN go to score page?
   console.log("Time expired.");
 }
 setTime(); 
