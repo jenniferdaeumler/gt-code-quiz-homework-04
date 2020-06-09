@@ -3,8 +3,24 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   padding: 10px;
-  width: 60%;
+  width: 60px;
 }
+#begin{
+    display: block;
+}
+
+#game{
+    display: none;
+}
+
+#score{
+    display: none;
+}
+
+#scoreboard{
+    display: none;
+}
+
 .time {
   font-family: Arial, Helvetica, sans-serif;
 }
