@@ -13,9 +13,8 @@
 
 <body>
     <!--Homescreen when opened to browser-->
-    <div class="container d-block" id= "begin" style="margin-top: 30px;">
+    <div class="container" id="begin" style="margin-top: 30px;">
         <div class="row">
-            <div class="homescreen">
                 <div class="col-md-12">
                     <h1>Coding Quiz</h1>
                 </div>
@@ -34,16 +33,15 @@
     </div>
 
     <!-- Questions-->
-    <div class="container d-none" id= "game" style="margin-top: 30px;">
+    <div class="container" id="game" style="margin-top: 30px;">
         <div class="row">
-            <div class="homescreen">
                 <div class="col-md-12">
                     <!-- Questions are shown here, I don't need a "header"-->
                     <h1>Questions Shown Here</h1>
                 </div>
                 <div class="col-md-12">
                     <p>
-                        These are all the questions shown here.  
+                        These are all the questions shown here.
                     </p>
                 </div>
                 <!--Buttons for answers-->
@@ -56,20 +54,22 @@
     </div>
 
 
-<!--Game over, score shown, enter name for highscore board-->
-    <div class="container d-none" id= "score" style="margin-top: 30px;">
+    <!--Game over, score shown, enter name for highscore board-->
+    <div class="container" id="score" style="margin-top: 30px;">
         <div class="row">
-            <div class="homescreen">
                 <div class="col-md-12">
                     <h1>You have completed the quiz</h1>
                 </div>
                 <div class="col-md-12">
                     <p>
-                    Here is your score. Enter your name for the highscore board. 
+                        Here is your score. Enter your name for the highscore board.
                     </p>
                 </div>
                 <!--Form for name-->
-
+                <form>
+                    <p>HELLO</p>
+                    <input placeholder="Name" id="scoreName" />
+                </form>
                 <!--Button to submit name for scoreboard-->
                 <button type="button" id="submitButton">Submit</button>
             </div>
@@ -77,18 +77,17 @@
     </div>
 
     <!--High score board-->
-    <div class="container d-none" id= "scoreboard" style="margin-top: 30px;">
+    <div class="container" id="scoreboard" style="margin-top: 30px;">
         <div class="row">
-            <div class="homescreen">
                 <div class="col-md-12">
                     <h1>High Score board</h1>
                 </div>
                 <div class="col-md-12">
                     <p>
-                       <!-- List of names, so OL/LI as an id?-->
-                       <ol>
-                           <li id="submissionName"></li>
-                       </ol>
+                        <!-- List of names, so OL/LI as an id?-->
+                    <ol>
+                        <li id="submissionName"></li>
+                    </ol>
                     </p>
                 </div>
                 <!--Button to clear scores-->
