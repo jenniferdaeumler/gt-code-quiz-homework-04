@@ -33,12 +33,22 @@ var question = [{
   },];
 
 // On Click for beginButton to start quiz
-var beginButton = document.querySelector("#beginButton");
+// var beginButton = document.querySelector("#beginButton");
 
-beginButton.addEventListener("click", function () {
+// beginButton.addEventListener("click", function () {
 
-console.log("Begin Button Clicked");
-});
+// console.log("Begin Button Clicked");
+// });
+
+// OR THIS On Click for beginButton to start quiz
+function clickBeginButton() {
+    var x = document.getElementById("#game");
+    if (x.innerHTML.display === "none") {
+      x.innerHTML.display = "block";
+    } else {
+      x.inner.display = "none";
+    }
+  }
 
 //Quiz timer
 var timerEl = document.querySelector(".time");
