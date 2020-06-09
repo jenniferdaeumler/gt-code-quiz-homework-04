@@ -5,9 +5,9 @@
 // 4. Score shown, with input boxes for name
 // 5. Submit button
 // 6. High score list shows with that name
-var beginPage = document.getElementById("#begin");
+var beginPage = document.querySelector("#begin");
 var beginButtonClick = document.querySelector("#beginButton");
-var gamePage = document.getElementById("#game");
+var gamePage = document.querySelector("#game");
 var questions = [
   {
     question: "Commonly used data type DO NOT include",
@@ -51,6 +51,9 @@ beginButtonClick.addEventListener(
     if (event.target.matches("button")) {
       console.log("Begin quiz button clicked");
       beginPage.style.display = "none";
+      gamePage.style.display = "block";
+      timerEl.style.display = "block";
+
     } else {
       beginPage.style.display = "block";
     }
@@ -67,8 +70,9 @@ beginButtonClick.addEventListener(
 
 //Quiz timer
 var timerEl = document.querySelector(".time");
-var buzzerEl = document.getElementById("buzzer");
-var secondsLeft = 5;
+//Am I even using this buzzerEl var??
+var buzzerEl = document.querySelector("#buzzer");
+var secondsLeft = 60;
 
 function setTime() {
   var timerInterval = setInterval(function () {
