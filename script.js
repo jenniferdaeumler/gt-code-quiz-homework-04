@@ -6,39 +6,48 @@
 // 5. Submit button
 // 6. High score list shows with that name
 
+var gamePage = document.getElementById("#game")
+
 var question = [{
-  question: "What is an example of a boolean value?",
-  answer: ["true", "3", "Strings", "if/else"],
-  correctAnswer: "true",
+  question: "Commonly used data type DO NOT include",
+  answer: ["strings", "booleans", "alerts", "numbers"],
+  correctAnswer: "alerts",
 },
 {
-    question: "How would you denote 'or' in a condition?",
-    answer: ["||", "&&", "oR", "-+"],
-    correctAnswer: "||",
+    question: "The condition in an if/else statement is enclosed within ___.",
+    answer: ["quotes", "curly brackets", "parentheses", "square brackets"],
+    correctAnswer: "parentheses",
   },
   {
-    question: "Objects cannot contain arrays.",
-    answer: ["true", "false"],
-    correctAnswer: "false",
+    question: "Arrays in JavaScript can be used to store ___.",
+    answer: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+    correctAnswer: "all of the above",
   },
   {
-    question: "We can change styles and properties of HTML elements using javascript by traversing the...",
-    answer: ["DOM", "HTML", "CSS", "User Interaction"],
-    correctAnswer: "DOM",
+    question: "String values must be enclosed within ___ when being assigned to variables.",
+    answer: ["commas", "curly brackets", "quotes", "parentheses"],
+    correctAnswer: "quotes",
   },
   {
-    question: "What do we do with arrays?",
-    answer: ["Iterate through them", "Store them", "Push them to the console", "Return them in the DOM"],
-    correctAnswer: "Iterate through them",
+    question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    answer: ["JavaScript", "terminal/bash", "Pfor loops", "console.log"],
+    correctAnswer: "console.log",
   },];
 
 // On Click for beginButton to start quiz
-// var beginButton = document.querySelector("#beginButton");
+var beginButtonClick = document.querySelector("#beginButton");
 
-// beginButton.addEventListener("click", function () {
+beginButtonClick.addEventListener("click", function () {
+event.gamePage
+console.log("Begin Button Clicked");
+//Div containing homeScreen hides
 
-// console.log("Begin Button Clicked");
-// });
+
+//Div containing Game appears
+//Call a function that starts the game ? 
+
+
+});
 
 // OR THIS On Click for beginButton to start quiz
 function clickBeginButton() {
