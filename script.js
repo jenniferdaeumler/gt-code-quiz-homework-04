@@ -7,29 +7,29 @@
 // 6. High score list shows with that name
 
 var question = [{
-  question: "Gandalf",
-  answer: ["greyhame", "stormcrow", "galdalfTheGray"],
-  correctAnswer: "grayhame",
+  question: "What is an example of a boolean value?",
+  answer: ["true", "3", "Strings", "if/else"],
+  correctAnswer: "true",
 },
 {
-    question: "Gandalf",
-    answer: ["greyhame", "stormcrow", "galdalfTheGray"],
-    correctAnswer: "grayhame",
+    question: "How would you denote 'or' in a condition?",
+    answer: ["||", "&&", "oR", "-+"],
+    correctAnswer: "||",
   },
   {
-    question: "Gandalf",
-    answer: ["greyhame", "stormcrow", "galdalfTheGray"],
-    correctAnswer: "grayhame",
+    question: "Objects cannot contain arrays.",
+    answer: ["true", "false"],
+    correctAnswer: "false",
   },
   {
-    question: "Gandalf",
-    answer: ["greyhame", "stormcrow", "galdalfTheGray"],
-    correctAnswer: "grayhame",
+    question: "We can change styles and properties of HTML elements using javascript by traversing the...",
+    answer: ["DOM", "HTML", "CSS", "User Interaction"],
+    correctAnswer: "DOM",
   },
   {
-    question: "Gandalf",
-    answer: ["greyhame", "stormcrow", "galdalfTheGray"],
-    correctAnswer: "grayhame",
+    question: "What do we do with arrays?",
+    answer: ["Iterate through them", "Store them", "Push them to the console", "Return them in the DOM"],
+    correctAnswer: "Iterate through them",
   },];
 
 // On Click for beginButton to start quiz
