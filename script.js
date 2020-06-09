@@ -49,7 +49,6 @@ beginButtonClick.addEventListener(
   //On click for beginButton closes beginPage
   function beginQuiz(event) {
     if (event.target.matches("button")) {
-      console.log("Begin quiz button clicked");
       beginPage.style.display = "none";
       gamePage.style.display = "block";
       timerEl.style.display = "block";
@@ -60,13 +59,14 @@ beginButtonClick.addEventListener(
   }
 );
 
-//Div containing homeScreen hides
+//Function that shows questions
+//Click on answer, if wrong, subtract 15 seconds, thn next question. else, next question.
+//After loop over, show score.
+//Submit form with name 
+//High scoreboard
 
-//Div containing Game appears & timer appears
 
-//Call a function that starts the game ?
 
-// OR THIS On Click for beginButton to start quiz
 
 //Quiz timer
 var timerEl = document.querySelector(".time");
