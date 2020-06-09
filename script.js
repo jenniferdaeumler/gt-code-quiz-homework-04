@@ -66,6 +66,8 @@ beginButtonClick.addEventListener(
 //High scoreboard
 
 
+
+
 //Quiz timer
 var timerEl = document.querySelector(".time");
 //Am I even using this buzzerEl var??
