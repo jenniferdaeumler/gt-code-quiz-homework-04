@@ -5,9 +5,9 @@
 // 4. Score shown, with input boxes for name
 // 5. Submit button
 // 6. High score list shows with that name
-var beginPage = document.querySelector("#begin");
-var beginButtonClick = document.querySelector("#beginButton");
-var gamePage = document.querySelector("#game");
+var beginPage = document.getElementById("begin");
+var beginButtonClick = document.getElementById("beginButton");
+var gamePage = document.getElementById("game");
 var questions = [
   {
     question: "Commonly used data type DO NOT include",
