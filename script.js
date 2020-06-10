@@ -59,11 +59,7 @@ beginButtonClick.addEventListener(
   }
 );
 
-//Function that shows questions
-//Click on answer, if wrong, subtract 15 seconds, thn next question. else, next question.
-//After loop over, show score.
-//Submit form with name 
-//High scoreboard
+
 
 function gamePlay (){
 if(gamePage.style.display= "block;"){
@@ -104,3 +100,15 @@ function sendMessage() {
   console.log("Time expired.");
 }
 setTime();
+
+
+//function for score submission
+//form in HTML
+//type name, submit "prevent default"
+//push name to list
+//score page "none", then scoreboard "block"
+
+//scoreboard function?
+//show OL of scores
+//button to restart game
+//button to clear board
