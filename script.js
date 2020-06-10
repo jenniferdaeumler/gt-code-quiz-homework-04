@@ -65,8 +65,20 @@ beginButtonClick.addEventListener(
 //Submit form with name 
 //High scoreboard
 
+function gamePlay (){
+if(gamePage.style.display= "block;"){
+//timer begins
+//loop through array/object (questions)
+//when answer clicked 
+//next question if correct
+//15 seconds off timer if incorrect
+//next index in array shows
+//again 
+//after all questions, stop timer if not already stopped
+//"none" game page, "block" score page
+}
 
-
+}
 
 //Quiz timer
 var timerEl = document.querySelector(".time");
