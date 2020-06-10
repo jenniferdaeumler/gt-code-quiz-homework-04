@@ -1,15 +1,13 @@
 .container {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  padding: 10px;
-  width: 60px;
   margin: auto;
 }
 .col-md-12 {
   text-align: center;
 }
 .button {
- NOTHING WORKS HERE 
+
+ /* nothing works here! */
 }
 
 #begin {
