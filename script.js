@@ -76,7 +76,7 @@ if(gamePage.style.display= "block;"){
 
 }
 
-//Quiz timer
+//Quiz timer DON'T LET IT START UNTIL BEGIN BUTTON!!! FIXXXXX
 var timerEl = document.querySelector(".time");
 //Am I even using this buzzerEl var??
 var buzzerEl = document.querySelector("#buzzer");
@@ -105,10 +105,11 @@ setTime();
 //function for score submission
 //form in HTML
 //type name, submit "prevent default"
-//push name to list
+//push name to list (Local storage for scoreboard)
 //score page "none", then scoreboard "block"
 
 //scoreboard function?
 //show OL of scores
+//local storage of those names and scores?
 //button to restart game
 //button to clear board
