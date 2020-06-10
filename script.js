@@ -43,22 +43,18 @@ var questions = [
   },
 ];
 
-// On Click for beginButton
-beginButtonClick.addEventListener(
-  "click",
+
+
   //On click for beginButton closes beginPage
-  function beginQuiz(event) {
-    if (event.target.matches("button")) {
+
+  function beginQuiz() {
       beginPage.style.display = "none";
       gamePage.style.display = "block";
       timerEl.style.display = "block";
 
-    } else {
-      beginPage.style.display = "block";
-    }
-  }
-);
-
+    } 
+//Click event listener
+beginButtonClick.addEventListener( "click", beginQuiz);
 
 
 function gamePlay (){
@@ -80,8 +76,9 @@ if(gamePage.style.display= "block;"){
 var timerEl = document.querySelector(".time");
 //Am I even using this buzzerEl var??
 var buzzerEl = document.querySelector("#buzzer");
-var secondsLeft = 60;
+var secondsLeft = 5;
 
+beginButtonClick.onclick= 
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
@@ -99,7 +96,7 @@ function sendMessage() {
   //IF time expires THEN go to score page?
   console.log("Time expired.");
 }
-setTime();
+
 
 
 //function for score submission
@@ -113,3 +110,5 @@ setTime();
 //local storage of those names and scores?
 //button to restart game
 //button to clear board
+
+//quiz question array must append the HTML element on click 
