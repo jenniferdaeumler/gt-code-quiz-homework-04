@@ -68,6 +68,11 @@ function beginQuiz() {
     questionText.textContent = currentQuestion.question;
     console.log(currentQuestion.question);
     
+//does it say textContent of null value in console.log because I need to look through another array?
+    var currentAnswer = questions[currentQuestionIndex];
+    questionButtonOne.textContent = currentAnswer.answer;
+    console.log(currentAnswer.answer);
+
 }
 //Click event listener
 
