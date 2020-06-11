@@ -22,7 +22,7 @@ var currentQuestionIndex = 0;
 //Questions and answers object
 var questions = [
     {
-        question: "Commonly used data type DO NOT include",
+        question: "Commonly used data type DO NOT include:",
         answer: ["strings", "booleans", "alerts", "numbers"],
         correctAnswer: "alerts",
     },
