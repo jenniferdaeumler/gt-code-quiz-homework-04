@@ -12,17 +12,17 @@ var timerEl = document.querySelector(".time");
 //change timer seconds to 60 before end
 var secondsLeft = 5;
 //Buttons for answers
-var questionButtonOne = document.getElementById("1button");
-var questionButtonTwo = document.getElementById("2button");
-var questionButtonThree = document.getElementById("3button");
-var questionButtonFour = document.getElementById("4button");
+var questionButtonOne = document.getElementById("buttonOne");
+var questionButtonTwo = document.getElementById("buttonTwo");
+var questionButtonThree = document.getElementById("buttonThree");
+var questionButtonFour = document.getElementById("buttonFour");
 var questionText = document.getElementById("questionParagraph");
 
 var currentQuestionIndex = 0;
 //Questions and answers object
 var questions = [
     {
-        question: "Commonly used data type DO NOT include",
+        question: "Commonly used data type DO NOT include:",
         answer: ["strings", "booleans", "alerts", "numbers"],
         correctAnswer: "alerts",
     },

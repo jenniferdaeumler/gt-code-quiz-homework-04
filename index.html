@@ -15,18 +15,18 @@
     <!--Homescreen when opened to browser-->
     <div class="container" id="begin" style="margin-top: 30px;">
         <div class="row">
-                <div class="col-md-12">
-                    <h1>Coding Quiz</h1>
-                </div>
-                <div class="col-md-12">
-                    <p>
-                        You will answer the coding questions within the given time frame.
-                        You will recieve points for correct answer, and be penazlied for
-                        incorrect answers. Try to finish within the given time. Submit
-                        your name for the highscore board at the end.
-                    </p>
-                </div>
-                <!--Button to start quiz-->
+            <div class="col-md-12">
+                <h1>Coding Quiz Challenge</h1>
+                <p>
+                    You will answer the coding questions within the given time frame.
+                    You will recieve points for correct answer, and be penazlied for
+                    incorrect answers. Try to finish within the given time. Submit
+                    your name for the highscore board at the end.
+                </p>
+            </div>
+            <!--Button to start quiz-->
+            <div class="row"></div>
+            <div class="col-md-12">
                 <button type="button" id="beginButton">Begin Quiz</button>
             </div>
         </div>
@@ -35,20 +35,21 @@
     <!-- Questions-->
     <div class="container" id="game" style="margin-top: 30px;">
         <div class="row">
+            <div class="col-md-12">
+                <p id="questionParagraph">
+                    These are all the questions shown here.
+                </p>
+            </div>
+            <!--Buttons for answers-->
+            <div class="row">
                 <div class="col-md-12">
-                    <!-- Questions are shown here, I don't need a "header"-->
-                 
+                    <div class="btn-group-vertical">
+                        <button type="button" id="buttonOne">1.</button><br>
+                        <button type="button" id="buttonTwo">2.</button><br>
+                        <button type="button" id="buttonThree">3.</button><br>
+                        <button type="button" id="buttonFour">4.</button>
+                    </div>
                 </div>
-                <div class="col-md-12">
-                    <p id="questionParagraph">
-                        These are all the questions shown here.
-                    </p>
-                </div>
-                <!--Buttons for answers-->
-                <button type="button" id="1Button">1.</button>
-                <button type="button" id="2Button">2.</button>
-                <button type="button" id="3Button">3.</button>
-                <button type="button" id="4Button">4.</button>
             </div>
         </div>
     </div>
@@ -57,45 +58,45 @@
     <!--Game over, score shown, enter name for highscore board-->
     <div class="container" id="score" style="margin-top: 30px;">
         <div class="row">
-                <div class="col-md-12">
-                    <h1>You have completed the quiz</h1>
-                </div>
-                <div class="col-md-12">
-                    <p>
-                        Here is your score. Enter your name for the highscore board.
-                    </p>
-                </div>
-                <!--Form for name-->
-                <form>
-                    <p>HELLO</p>
-                    <input placeholder="Name" id="scoreName" />
-                </form>
-                <!--Button to submit name for scoreboard-->
-                <button type="button" id="submitButton">Submit</button>
+            <div class="col-md-12">
+                <h1>You have completed the quiz</h1>
             </div>
+            <div class="col-md-12">
+                <p>
+                    Here is your score. Enter your name for the highscore board.
+                </p>
+            </div>
+            <!--Form for name-->
+            <form>
+                <p>HELLO</p>
+                <input placeholder="Name" id="scoreName" />
+            </form>
+            <!--Button to submit name for scoreboard-->
+            <button type="button" id="submitButton">Submit</button>
         </div>
+    </div>
     </div>
 
     <!--High score board-->
     <div class="container" id="scoreboard" style="margin-top: 30px;">
         <div class="row">
-                <div class="col-md-12">
-                    <h1>High Score board</h1>
-                </div>
-                <div class="col-md-12">
-                    <p>
-                        <!-- List of names, so OL/LI as an id?-->
-                    <ol>
-                        <li id="submissionName"></li>
-                    </ol>
-                    </p>
-                </div>
-                <!--Button to clear scores-->
-                <button type="button" id="clearButton">Clear Score Board</button>
-                <!--Button to start over-->
-                <button type="button" id="restartButton">Start Over</button>
+            <div class="col-md-12">
+                <h1>High Score board</h1>
             </div>
+            <div class="col-md-12">
+                <p>
+                    <!-- List of names, so OL/LI as an id?-->
+                <ol>
+                    <li id="submissionName"></li>
+                </ol>
+                </p>
+            </div>
+            <!--Button to clear scores-->
+            <button type="button" id="clearButton">Clear Score Board</button>
+            <!--Button to start over-->
+            <button type="button" id="restartButton">Start Over</button>
         </div>
+    </div>
     </div>
 
     <!--Timer-->
