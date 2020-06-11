@@ -20,20 +20,20 @@ var questionText = document.getElementById("questionParagraph");
 
 var currentQuestionIndex = 0;
 //Questions and answers object
-var questions = [
+var questionsArray = [
     {
-        question: "Commonly used data type DO NOT include:",
-        answer: ["strings", "booleans", "alerts", "numbers"],
+        questionString: "Commonly used data type DO NOT include:",
+        answerArray: ["strings", "booleans", "alerts", "numbers"],
         correctAnswer: "alerts",
     },
     {
-        question: "The condition in an if/else statement is enclosed within ___.",
-        answer: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        questionString: "The condition in an if/else statement is enclosed within ___.",
+        answerArray: ["quotes", "curly brackets", "parentheses", "square brackets"],
         correctAnswer: "parentheses",
     },
     {
-        question: "Arrays in JavaScript can be used to store ___.",
-        answer: [
+        questionString: "Arrays in JavaScript can be used to store ___.",
+        answerArray: [
             "numbers and strings",
             "other arrays",
             "booleans",
@@ -42,15 +42,15 @@ var questions = [
         correctAnswer: "all of the above",
     },
     {
-        question:
+        questionString:
             "String values must be enclosed within ___ when being assigned to variables.",
-        answer: ["commas", "curly brackets", "quotes", "parentheses"],
+        answerArray: ["commas", "curly brackets", "quotes", "parentheses"],
         correctAnswer: "quotes",
     },
     {
-        question:
+        questionString:
             "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answer: ["JavaScript", "terminal/bash", "Pfor loops", "console.log"],
+        answerArray: ["JavaScript", "terminal/bash", "Pfor loops", "console.log"],
         correctAnswer: "console.log",
     },
 ];
@@ -63,15 +63,15 @@ function beginQuiz() {
     gamePage.style.display = "block";
     timerEl.style.display = "block";
 //Questions showing on page , no answers yet
-    var currentQuestion = questions[currentQuestionIndex];
+    var currentQuestion = questionsArray[currentQuestionIndex];
     console.log(currentQuestionIndex); //logs correctly
-    questionText.textContent = currentQuestion.question;
-    console.log(currentQuestion.question);
+    questionText.textContent = currentQuestion.questionString;
+    console.log(currentQuestion.questionString);
     
 //does it say textContent of null value in console.log because I need to look through another array?
-    var currentAnswer = questions[currentQuestionIndex];
-    questionButtonOne.textContent = currentAnswer.answer;
-    console.log(currentAnswer.answer);
+    var currentAnswer = questionsArray[currentQuestionIndex];
+    questionButtonOne.textContent = currentAnswer.answerArray;
+    console.log(currentAnswer.answerArray);
 
 }
 //Click event listener
