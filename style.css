@@ -54,4 +54,5 @@
 .time {
   font-family: Arial, Helvetica, sans-serif;
   display: none;
+  text-align: right; 
 }
