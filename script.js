@@ -12,11 +12,6 @@ var scorePage = document.getElementById("score");
 var timerEl = document.querySelector(".time");
 //change timer seconds to 60 before end
 var secondsLeft = 60;
-// //Buttons for answers OLD
-// var questionButtonOne = document.getElementById("buttonOne");
-// var questionButtonTwo = document.getElementById("buttonTwo");
-// var questionButtonThree = document.getElementById("buttonThree");
-// var questionButtonFour = document.getElementById("buttonFour");
 var questionText = document.getElementById("question-paragraph");
 var choicesEl = document.getElementById("choice-buttons");
 var feedbackEl = document.getElementById("feedback");
@@ -58,7 +53,6 @@ var questionsArray = [
 ];
 
 //On click for beginButton closes beginPage
-
 function beginQuiz() {
     beginPage.style.display = "none";
     gamePage.style.display = "block";
@@ -72,7 +66,7 @@ function beginQuiz() {
 
     choicesEl.innerHTML = "";
     console.log(choicesEl.innerHTML);
-    // loop overchoices
+    // Loop over questions and choices.. Gives me five boxes not four
     for(var i=0; i<questionsArray.length; i++) {
       // create new button for each choices
       var choiceNode = document.createElement("button");
@@ -88,6 +82,7 @@ function beginQuiz() {
       choicesEl.appendChild(choiceNode);
     };}
   
+    //Clicking on questions (tutor helped)
     function questionClick() {
         //check is user guessed wrong
         if (this.value !== questionsArray[currentQuestionIndex].correctAnswer) {
@@ -109,6 +104,7 @@ function beginQuiz() {
         }
       }
   
+//wWhy is this so weird and down here? I can't move it because it messes everything up.... 
 beginButtonClick.onclick = function setTime() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
@@ -129,5 +125,5 @@ function sendMessage() {
     console.log("Time expired.");
 }
 
-//Click event listener
+//Click event listener... is this even doing anything????
 beginButtonClick.addEventListener("click", beginQuiz);
