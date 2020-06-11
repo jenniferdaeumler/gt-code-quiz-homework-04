@@ -90,6 +90,7 @@ beginButtonClick.addEventListener("click", beginQuiz);
 // }
 
 //Timer starts on beginButton click
+//How do I style??
 beginButtonClick.onclick = function setTime() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
