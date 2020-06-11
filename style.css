@@ -8,27 +8,31 @@
   font-size: 20px;
 }
 #beginButton {
-background-color: purple ;
-color:white;
-object-position: center;
- /* nothing works here! */
+  background-color: purple;
+  color: white;
+  object-position: center;
+  /* nothing works here! */
 }
-#buttonOne{
-    background-color: purple;
-    color: white;
-}
-#buttonTwo{
-    background-color: purple;
-    color: white;
 
+.btn-group-vertical {
+  object-position: center;
+  font-size: 18px;
 }
-#buttonThree{
-    background-color: purple;
-    color: white;
+#buttonOne {
+  background-color: purple;
+  color: white;
 }
-#buttonFour{
-    background-color: purple;
-    color: white;
+#buttonTwo {
+  background-color: purple;
+  color: white;
+}
+#buttonThree {
+  background-color: purple;
+  color: white;
+}
+#buttonFour {
+  background-color: purple;
+  color: white;
 }
 
 #begin {
