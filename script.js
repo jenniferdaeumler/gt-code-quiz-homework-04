@@ -69,6 +69,7 @@ beginButtonClick.addEventListener("click", function () {
   clearnBeginQuiz();
   beginGame();
   gameTimer();
+  quizQuestions();
 });
 
 function gameTimer() {
@@ -78,18 +79,11 @@ function gameTimer() {
 
     if (secondsLeft <= 0) {
       clearInterval(timerInterval);
-      timerExpirationMessage();
-      scorePage.style.display = "block";
       gamePage.style.display = "none";
+      scoreSubmission();
     }
   }, 1000);
   console.log("Timer started.");
-}
-
-function timerExpirationMessage() {
-  timerEl.textContent = "Time has expired.";
-  //IF time expires THEN go to score page?
-  console.log("Time expired.");
 }
 
 function quizQuestions() {
@@ -105,6 +99,26 @@ function quizQuestions() {
     }
   }
 }
+
+function scoreSubmission(){
+var scoreSubmissionForm = document.createElement("FORM");
+scoreSubmissionForm.setAttribute("id", "scoreForm");
+document.body.append(scoreSubmissionForm);
+var scoreFormInput = document.createElement("INPUT");
+scoreFormInput.setAttribute("type", "text");
+scoreFormInput.setAttribute("value", "HI")
+document.getElementById("scoreForm").append(scoreFormInput);
+var submitButton = document.createElement("button");
+submitButton.className =("btn btn-primary");
+submitButton.setAttribute("type", "input")
+submitButton.setAttribute("value", "Submit")
+document.body.append(submitButton);
+submitButton.addEventListener("click", function(event){
+    event.preventDefault();
+    console.log("button clicked for submission")
+})
+}
+
 
 // event listener for clicking answers
 choiceNode.addEventListener.onclick("click", function () {
