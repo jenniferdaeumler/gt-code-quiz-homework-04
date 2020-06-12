@@ -80,6 +80,7 @@ function gameTimer() {
     if (secondsLeft <= 0) {
       clearInterval(timerInterval);
       gamePage.style.display = "none";
+      timerEl.style.display = "none";
       scoreSubmission();
     }
   }, 1000);
@@ -87,11 +88,12 @@ function gameTimer() {
 }
 
 function quizQuestions() {
-  for (var i = 0; i < questionsArray.length; i++) {
-    var currentQuestion = questionsArray[currentQuestionIndex];
-    questionText.textContent = currentQuestion.questionString;
-    console.log(currentQuestion.questionString);
-    
+  var currentQuestion = questionsArray[currentQuestionIndex];
+  questionText.textContent = currentQuestion.questionString;
+  console.log(currentQuestion.questionString);
+  for (var i = 0; i < currentQuestion.answerArray.length; i++) {
+      console.log(currentQuestion.answerArray[i]);
+
     if (questionsArray[0].correctAnswer) {
       console.log("Correct answer");
     } else {
@@ -100,30 +102,29 @@ function quizQuestions() {
   }
 }
 
-function scoreSubmission(){
-var scoreSubmissionForm = document.createElement("FORM");
-scoreSubmissionForm.setAttribute("id", "scoreForm");
-document.body.append(scoreSubmissionForm);
-var scoreFormInput = document.createElement("INPUT");
-scoreFormInput.setAttribute("type", "text");
-scoreFormInput.setAttribute("value", "Name")
-document.getElementById("scoreForm").append(scoreFormInput);
-var submitButton = document.createElement("button");
-submitButton.innerHTML = "Submit";
-submitButton.className =("button");
-submitButton.setAttribute("type", "input")
-submitButton.setAttribute("value", "Submit")
-submitButton.style.color = "white";
-submitButton.style.color = "purple"
-submitButton.style.width = '100px'; 
-submitButton.style.height = '30px'; 
-document.body.append(submitButton);
-submitButton.addEventListener("click", function(event){
+function scoreSubmission() {
+  var scoreSubmissionForm = document.createElement("FORM");
+  scoreSubmissionForm.setAttribute("id", "scoreForm");
+  document.body.append(scoreSubmissionForm);
+  var scoreFormInput = document.createElement("INPUT");
+  scoreFormInput.setAttribute("type", "text");
+  scoreFormInput.setAttribute("value", "Name");
+  document.getElementById("scoreForm").append(scoreFormInput);
+  var submitButton = document.createElement("button");
+  submitButton.innerHTML = "Submit";
+  submitButton.className = "button";
+  submitButton.setAttribute("type", "input");
+  submitButton.setAttribute("value", "Submit");
+  submitButton.style.color = "white";
+  submitButton.style.color = "purple";
+  submitButton.style.width = "100px";
+  submitButton.style.height = "30px";
+  document.body.append(submitButton);
+  submitButton.addEventListener("click", function (event) {
     event.preventDefault();
-    console.log("button clicked for submission")
-})
+    console.log("button clicked for submission");
+  });
 }
-
 
 // event listener for clicking answers
 choiceNode.addEventListener.onclick("click", function () {
