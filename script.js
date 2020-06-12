@@ -92,14 +92,26 @@ function quizQuestions() {
   questionText.textContent = currentQuestion.questionString;
   console.log(currentQuestion.questionString);
   for (var i = 0; i < currentQuestion.answerArray.length; i++) {
-      console.log(currentQuestion.answerArray[i]);
-
+    console.log(currentQuestion.answerArray[i]);
+    choiceNodeEl();
     if (questionsArray[0].correctAnswer) {
       console.log("Correct answer");
     } else {
       console.log("Incorrect answer");
     }
   }
+}
+
+function choiceNodeEl() {
+  var choiceNode = document.createElement("button");
+  choiceNode.setAttribute("class", "btn-group-vertical");
+  choiceNode.setAttribute("style", "background-color: purple");
+  choiceNode.style.backgroundcolor = "purple";
+  choiceNode.style.height = "30px";
+  choiceNode.style.width = "30px";
+  choiceNode.setAttribute("class", "choice");
+  choiceNode.setAttribute("value", "choice");
+  choicesEl.append(choiceNode);
 }
 
 function scoreSubmission() {

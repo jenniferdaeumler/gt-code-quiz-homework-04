@@ -1,42 +1,50 @@
-# 04 Web APIs: Code Quiz
+# Coding Quiz
+https://jenniferdaeumler.github.io/gt-code-quiz-homework-04/
+https://github.com/jenniferdaeumler/gt-code-quiz-homework-04
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
-## User Story
+## Table of Contents 
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
 
-## Acceptance Criteria
+## Description 
+I have created an application that generates a random password based on user-selected criteria. This app runs in the browser. The Javascript powers dynamic updates 
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
+## Installation
+Clone the repo, and run the files in browser. 
 
-The following animation demonstrates the application functionality:
+## Usage 
+If you have access to sensitive data and want to randomly generate a strong password that meets certain criteria use this.  Click the generate password button, and you will be presented with a series of prompts and alerts. Type in a number between 8 and 128 to choose your length.  If you choose a number outside the specified length, you will be asked to try again. The rest of the alerts ask if you would like lowercase characters, uppercase characters, numbers, and/or special characters.  Select "OK" if you would like to include the character type, select "cancel" if you would not like to include the character type.  You must select at least one character type to avoid an error message.  
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+After all prompts are answered, a password will be shown in the box where the placeholder "Your Secure Password" is shown. <br>
+<br>Screen when opening app.
+<img src="https://i.imgur.com/LpJQayp.png">
+<br><br>Screen after clicking button, length of password prompt.
+<img src="https://i.imgur.com/sdc7KWO.png">
+<br><br> One of four character type prompt.  OK for yes, cancel for no.
+<img src="https://i.imgur.com/Rscaej4.png">
+<br><br>Password result after specifications made.
+<img src="https://i.imgur.com/1PD8MhE.png">
 
-### Review
+## Credits
+-Solo projected completed as homework for Georgia Tech Full-Stack Flex Program. 
+-Trilogy Education provided assets.
+-Ascii code assistance (https://www.techiedelight.com/character-to-ascii-code-javascript/)
+-Ascii code assistance (https://www.w3schools.com/charsets/ref_html_ascii.asp)
+-For loop assistnace https://www.w3schools.com/js/js_loop_for.asp
+-Randomizer assistance https://www.w3schools.com/js/js_random.asp
+-Steve Morris, colleague at GT Bootcamp, tutored me on this project.  We went over a lot of the code together. 
 
-You are required to submit the following for review:
 
-* The URL of the functional, deployed application.
+## License
+Copyright (c) [2020] [Jennifer Daeumler]
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
