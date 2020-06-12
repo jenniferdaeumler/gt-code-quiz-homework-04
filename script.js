@@ -80,6 +80,7 @@ function gameTimer() {
     if (secondsLeft <= 0) {
       clearInterval(timerInterval);
       gamePage.style.display = "none";
+      timerEl.style.display = "none";
       scoreSubmission();
     }
   }, 1000);
@@ -92,7 +93,7 @@ function quizQuestions() {
   console.log(currentQuestion.questionString);
   for (var i = 0; i < currentQuestion.answerArray.length; i++) {
       console.log(currentQuestion.answerArray[i]);
-      
+
     if (questionsArray[0].correctAnswer) {
       console.log("Correct answer");
     } else {
