@@ -12,32 +12,26 @@ https://github.com/jenniferdaeumler/gt-code-quiz-homework-04
 
 
 ## Description 
-I have created an application that generates a random password based on user-selected criteria. This app runs in the browser. The Javascript powers dynamic updates 
+I have created an application that generates a coding quiz. This app runs in the browser. The Javascript powers dynamic updates to the quiz based on user interaction. 
 
 ## Installation
 Clone the repo, and run the files in browser. 
 
 ## Usage 
-If you have access to sensitive data and want to randomly generate a strong password that meets certain criteria use this.  Click the generate password button, and you will be presented with a series of prompts and alerts. Type in a number between 8 and 128 to choose your length.  If you choose a number outside the specified length, you will be asked to try again. The rest of the alerts ask if you would like lowercase characters, uppercase characters, numbers, and/or special characters.  Select "OK" if you would like to include the character type, select "cancel" if you would not like to include the character type.  You must select at least one character type to avoid an error message.  
+If you would like to test your coding knowledge, just click the "begin quiz" button.  You will see a 60 second countdown timer in the right hand corner as the quiz begins.  Read the question, and click on the correct answer.  If you click an incorrect answer, the time decreaes by 15 seconds.  If timer runs out, the quiz is automatically over. When you finish the quiz, you will see your score.  Your score is the number of seconds left when you finished the quiz.  Type your name into the form, and click "submit".  You will then see the high score board.  You can compete against yourself, and try and beat your previous high score.  Clear the scoreboard if you wish.  You can choose to restart the quiz at that time too.  Good luck, and  have fun!  
 
-After all prompts are answered, a password will be shown in the box where the placeholder "Your Secure Password" is shown. <br>
-<br>Screen when opening app.
+<br>
 <img src="https://i.imgur.com/LpJQayp.png">
-<br><br>Screen after clicking button, length of password prompt.
+<br><br>
 <img src="https://i.imgur.com/sdc7KWO.png">
-<br><br> One of four character type prompt.  OK for yes, cancel for no.
+<br><br> 
 <img src="https://i.imgur.com/Rscaej4.png">
-<br><br>Password result after specifications made.
+<br><br>
 <img src="https://i.imgur.com/1PD8MhE.png">
 
 ## Credits
 -Solo projected completed as homework for Georgia Tech Full-Stack Flex Program. 
 -Trilogy Education provided assets.
--Ascii code assistance (https://www.techiedelight.com/character-to-ascii-code-javascript/)
--Ascii code assistance (https://www.w3schools.com/charsets/ref_html_ascii.asp)
--For loop assistnace https://www.w3schools.com/js/js_loop_for.asp
--Randomizer assistance https://www.w3schools.com/js/js_random.asp
--Steve Morris, colleague at GT Bootcamp, tutored me on this project.  We went over a lot of the code together. 
 
 
 ## License
