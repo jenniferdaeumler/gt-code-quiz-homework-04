@@ -18,109 +18,110 @@ var feedbackEl = document.getElementById("feedback");
 var currentQuestionIndex = 0;
 //Questions and answers object
 var questionsArray = [
-    {
-        questionString: "Commonly used data type DO NOT include:",
-        answerArray: ["strings", "booleans", "alerts", "numbers"],
-        correctAnswer: 2,
-    },
-    {
-        questionString:
-            "The condition in an if/else statement is enclosed within ___.",
-        answerArray: ["quotes", "curly brackets", "parentheses", "square brackets"],
-        correctAnswer: 2,
-    },
-    {
-        questionString: "Arrays in JavaScript can be used to store ___.",
-        answerArray: [
-            "numbers and strings",
-            "other arrays",
-            "booleans",
-            "all of the above",
-        ],
-        correctAnswer: 3,
-    },
-    {
-        questionString:
-            "String values must be enclosed within ___ when being assigned to variables.",
-        answerArray: ["commas", "curly brackets", "quotes", "parentheses"],
-        correctAnswer: 2,
-    },
-    {
-        questionString:
-            "A very useful tool used during development and debugging for printing content to the debugger is:",
-        answerArray: ["JavaScript", "terminal/bash", "For loops", "console.log"],
-        correctAnswer: 3,
-    },
+  {
+    questionString: "Commonly used data type DO NOT include:",
+    answerArray: ["strings", "booleans", "alerts", "numbers"],
+    correctAnswer: 2,
+  },
+  {
+    questionString:
+      "The condition in an if/else statement is enclosed within ___.",
+    answerArray: ["quotes", "curly brackets", "parentheses", "square brackets"],
+    correctAnswer: 2,
+  },
+  {
+    questionString: "Arrays in JavaScript can be used to store ___.",
+    answerArray: [
+      "numbers and strings",
+      "other arrays",
+      "booleans",
+      "all of the above",
+    ],
+    correctAnswer: 3,
+  },
+  {
+    questionString:
+      "String values must be enclosed within ___ when being assigned to variables.",
+    answerArray: ["commas", "curly brackets", "quotes", "parentheses"],
+    correctAnswer: 2,
+  },
+  {
+    questionString:
+      "A very useful tool used during development and debugging for printing content to the debugger is:",
+    answerArray: ["JavaScript", "terminal/bash", "For loops", "console.log"],
+    correctAnswer: 3,
+  },
 ];
 //Clear begin quiz screen
 function clearnBeginQuiz() {
-    beginPage.style.display = "none";
+  beginPage.style.display = "none";
 }
 
 //Display the quiz and timer
 function beginGame() {
-    gamePage.style.display = "block";
-    timerEl.style.display = "block";
+  gamePage.style.display = "block";
+  timerEl.style.display = "block";
 }
 
 //Click event listener... is this even doing anything????
 beginButtonClick.addEventListener("click", function () {
-    console.log("Begin button clicked");
-    clearnBeginQuiz();
-    beginGame();
-    gameTimer();
-    quizQuestions();
+  console.log("Begin button clicked");
+  clearnBeginQuiz();
+  beginGame();
+  gameTimer();
+  quizQuestions();
 });
 
 function gameTimer() {
-    var timerInterval = setInterval(function () {
-        secondsLeft--;
-        timerEl.textContent = secondsLeft + " seconds left for quiz.";
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    timerEl.textContent = secondsLeft + " seconds left for quiz.";
 
-        if (secondsLeft <= 0) {
-            clearInterval(timerInterval);
-            gamePage.style.display = "none";
-            timerEl.style.display = "none";
-            scoreSubmission();
-        }
-    }, 1000);
-    console.log("Timer started.");
+    if (secondsLeft <= 0) {
+      clearInterval(timerInterval);
+      gamePage.style.display = "none";
+      timerEl.style.display = "none";
+      scoreSubmission();
+    }
+  }, 1000);
+  console.log("Timer started.");
 }
 
 function quizQuestions() {
-    var currentQuestion = questionsArray[currentQuestionIndex];
-    questionText.textContent = currentQuestion.questionString;
-    console.log(currentQuestion.questionString);
-    for (var i = 0; i < currentQuestion.answerArray.length; i++) {
-        console.log(currentQuestion.answerArray[i]);
-        var choiceNode = document.createElement("button");
-        choiceNode.setAttribute("class", "choiceNode button btn-secondary");
-        choiceNode.setAttribute("style", "background-color: purple");
-        choiceNode.style.backgroundcolor = "purple";
-        choiceNode.style.height = "50px";
-        choiceNode.style.width = "100px";
-        choiceNode.setAttribute("class", "choice");
-        choiceNode.setAttribute("value", "choice");
-        choicesEl.append(choiceNode);
-        choiceNode.textContent = currentQuestion.answerArray[i];
+  var currentQuestion = questionsArray[currentQuestionIndex];
+  questionText.textContent = currentQuestion.questionString;
+  console.log(currentQuestion.questionString);
+  choicesEl.innerHTML = "";
+  for (var i = 0; i < currentQuestion.answerArray.length; i++) {
+    console.log(currentQuestion.answerArray[i]);
+    var choiceNode = document.createElement("button");
+    choiceNode.setAttribute("class", "choiceNode button btn-secondary");
+    choiceNode.setAttribute("style", "background-color: purple");
+    choiceNode.style.backgroundcolor = "purple";
+    choiceNode.style.height = "50px";
+    choiceNode.style.width = "100px";
+    choiceNode.setAttribute("class", "choice");
+    choiceNode.setAttribute("value", "choice");
+    choiceNode.textContent = currentQuestion.answerArray[i];
+    choicesEl.append(choiceNode);
+    
 
+    choiceNode.addEventListener("click", function () {
+      currentQuestionIndex++;
 
-        choiceNode.addEventListener("click", function () {
-            currentQuestionIndex++;
+      console.log(currentQuestionIndex);
+      quizQuestions();
+    });
 
-            console.log(currentQuestionIndex);
-            quizQuestions();
-        });
+    //OWN FUNCTION SOON  choicenide on click current question ++  based on button click this.value compared to button selected?
+    // string match string... change answers to string
 
-        //OWN FUNCTION SOON  choicenide on click current question ++  based on button click this.value compared to button selected?
-        // string match string... change answers to string
-
-        if (questionsArray[0].correctAnswer) {
-            console.log("Correct answer");
-        } else {
-            console.log("Incorrect answer");
-        }
+    if (questionsArray[0].correctAnswer) {
+      console.log("Correct answer");
+    } else {
+      console.log("Incorrect answer");
     }
+  }
 }
 
 // function choiceNodeEl() {
@@ -136,27 +137,27 @@ function quizQuestions() {
 // }
 
 function scoreSubmission() {
-    var scoreSubmissionForm = document.createElement("FORM");
-    scoreSubmissionForm.setAttribute("id", "scoreForm");
-    document.body.append(scoreSubmissionForm);
-    var scoreFormInput = document.createElement("INPUT");
-    scoreFormInput.setAttribute("type", "text");
-    scoreFormInput.setAttribute("value", "Name");
-    document.getElementById("scoreForm").append(scoreFormInput);
-    var submitButton = document.createElement("button");
-    submitButton.innerHTML = "Submit";
-    submitButton.className = "button";
-    submitButton.setAttribute("type", "input");
-    submitButton.setAttribute("value", "Submit");
-    submitButton.style.color = "white";
-    submitButton.style.color = "purple";
-    submitButton.style.width = "100px";
-    submitButton.style.height = "30px";
-    document.body.append(submitButton);
-    submitButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        console.log("button clicked for submission");
-    });
+  var scoreSubmissionForm = document.createElement("FORM");
+  scoreSubmissionForm.setAttribute("id", "scoreForm");
+  document.body.append(scoreSubmissionForm);
+  var scoreFormInput = document.createElement("INPUT");
+  scoreFormInput.setAttribute("type", "text");
+  scoreFormInput.setAttribute("value", "Name");
+  document.getElementById("scoreForm").append(scoreFormInput);
+  var submitButton = document.createElement("button");
+  submitButton.innerHTML = "Submit";
+  submitButton.className = "button";
+  submitButton.setAttribute("type", "input");
+  submitButton.setAttribute("value", "Submit");
+  submitButton.style.color = "white";
+  submitButton.style.color = "purple";
+  submitButton.style.width = "100px";
+  submitButton.style.height = "30px";
+  document.body.append(submitButton);
+  submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("button clicked for submission");
+  });
 }
 
 // event listener for clicking answers
