@@ -106,12 +106,17 @@ scoreSubmissionForm.setAttribute("id", "scoreForm");
 document.body.append(scoreSubmissionForm);
 var scoreFormInput = document.createElement("INPUT");
 scoreFormInput.setAttribute("type", "text");
-scoreFormInput.setAttribute("value", "HI")
+scoreFormInput.setAttribute("value", "Name")
 document.getElementById("scoreForm").append(scoreFormInput);
 var submitButton = document.createElement("button");
-submitButton.className =("btn btn-primary");
+submitButton.innerHTML = "Submit";
+submitButton.className =("button");
 submitButton.setAttribute("type", "input")
 submitButton.setAttribute("value", "Submit")
+submitButton.style.color = "white";
+submitButton.style.color = "purple"
+submitButton.style.width = '100px'; 
+submitButton.style.height = '30px'; 
 document.body.append(submitButton);
 submitButton.addEventListener("click", function(event){
     event.preventDefault();
