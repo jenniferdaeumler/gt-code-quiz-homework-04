@@ -20,13 +20,13 @@ Clone the repo, and run the files in browser.
 ## Usage 
 If you would like to test your coding knowledge, just click the "begin quiz" button.  You will see a 60 second countdown timer in the right hand corner as the quiz begins.  Read the question, and click on the correct answer.  If you click an incorrect answer, the time decreaes by 15 seconds.  If timer runs out, the quiz is automatically over. When you finish the quiz, you will see your score.  Your score is the number of seconds left when you finished the quiz.  Type your name into the form, and click "submit".  You will then see the high score board.  You can compete against yourself, and try and beat your previous high score.  Clear the scoreboard if you wish.  You can choose to restart the quiz at that time too.  Good luck, and  have fun!  
 
-Begin Quiz Screen
+Begin Quiz Screen<br>
 <img src="https://i.imgur.com/hofVjyb.png?1">
 <br><br>
-One question from the quiz, along with timer in upper right corner.
+One question from the quiz, along with timer in upper right corner.<br>
 <img src="https://i.imgur.com/grZ5PG2.png?1">
 <br><br>
-Submit your name for the score board. 
+Submit your name for the score board. <br>
 <img src="https://i.imgur.com/Rifw0ll.png?1">
 
 
