@@ -10,8 +10,9 @@ var beginButtonClick = document.getElementById("beginButton");
 var gamePage = document.getElementById("game");
 var scorePage = document.getElementById("score");
 var timerEl = document.querySelector(".time");
+var scoreBoardEl = document.getElementById("scoreboard");
 //change timer seconds to 60 before end
-var secondsLeft = 5;
+var secondsLeft = 60;
 var questionText = document.getElementById("question-paragraph");
 var choicesEl = document.getElementById("choice-buttons");
 var feedbackEl = document.getElementById("feedback");
@@ -81,6 +82,7 @@ function gameTimer() {
       clearInterval(timerInterval);
       gamePage.style.display = "none";
       timerEl.style.display = "none";
+      scorePage.style.display = "block";
       scoreSubmission();
     }
   }, 1000);
@@ -91,45 +93,93 @@ function quizQuestions() {
   var currentQuestion = questionsArray[currentQuestionIndex];
   questionText.textContent = currentQuestion.questionString;
   console.log(currentQuestion.questionString);
+  choicesEl.innerHTML = "";
   for (var i = 0; i < currentQuestion.answerArray.length; i++) {
-      console.log(currentQuestion.answerArray[i]);
-
-    if (questionsArray[0].correctAnswer) {
-      console.log("Correct answer");
-    } else {
-      console.log("Incorrect answer");
+    console.log(currentQuestion.answerArray[i]);
+    var choiceNode = document.createElement("li");
+    choiceNode.setAttribute("type", "button");
+    choiceNode.setAttribute("class", "btn btn-primary mybutton btn-block");
+    choiceNode.setAttribute(
+      "style",
+      "background-color: purple; font-size: 15px; color: white; height: 40px; width: 200px"
+    );
+    choiceNode.textContent = currentQuestion.answerArray[i];
+    choicesEl.append(choiceNode);
+    choiceNode.addEventListener("click", function () {
+      currentQuestionIndex++;
+      console.log(currentQuestionIndex);
+      quizQuestions();
+    });
+    function evaluateChoice(selection) {
+      if (selection === questionsArray[currentQuestion].correctAnswer) {
+        alert("Correct answer");
+      } else {
+        alert("Incorrect answer");
+        secondsLeft -= 15;
+      }
     }
+
+    //OWN FUNCTION SOON  choicenide on click current question ++  based on button click this.value compared to button selected?
+    // string match string... change answers to string
   }
 }
 
+// function choiceNodeEl() {
+//   var choiceNode = document.createElement("button");
+//   choiceNode.setAttribute("class", "choiceNode btn-group-vertical");
+//   choiceNode.setAttribute("style", "background-color: purple");
+//   choiceNode.style.backgroundcolor = "purple";
+//   choiceNode.style.height = "30px";
+//   choiceNode.style.width = "30px";
+//   choiceNode.setAttribute("class", "choice");
+//   choiceNode.setAttribute("value", "choice");
+//   choicesEl.append(choiceNode);
+// }
+
 function scoreSubmission() {
   var scoreSubmissionForm = document.createElement("FORM");
-  scoreSubmissionForm.setAttribute("id", "scoreForm");
-  document.body.append(scoreSubmissionForm);
-  var scoreFormInput = document.createElement("INPUT");
-  scoreFormInput.setAttribute("type", "text");
-  scoreFormInput.setAttribute("value", "Name");
-  document.getElementById("scoreForm").append(scoreFormInput);
+  var scorePageText = document.createElement("H3");
+  var scoreSubmissionForm = document.createElement("FORM");
+  var scorePageText = document.createElement("H3");
+  var enterInitials = document.createElement("P");
   var submitButton = document.createElement("button");
+  var scoreFormInput = document.createElement("INPUT");
+  scorePageText.textContent = "All done!";
+  document.body.append(scorePageText);
+  document.body.append(enterInitials);
+  enterInitials.textContent = "Enter your initials";
+  scoreSubmissionForm.setAttribute("id", "scoreForm");
+  scoreFormInput.setAttribute("type", "text");
+  document.body.append(scoreSubmissionForm);
+  document.getElementById("scoreForm").append(scoreFormInput);
   submitButton.innerHTML = "Submit";
   submitButton.className = "button";
   submitButton.setAttribute("type", "input");
   submitButton.setAttribute("value", "Submit");
-  submitButton.style.color = "white";
-  submitButton.style.color = "purple";
-  submitButton.style.width = "100px";
-  submitButton.style.height = "30px";
+  submitButton.setAttribute(
+    "style",
+    "color: white; background-color: purple; height: 30px; width: 75px"
+  );
   document.body.append(submitButton);
   submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log("button clicked for submission");
+    if (event.target.matches("button")) {
+      event.preventDefault();
+      console.log("button clicked for submission");
+      scorePage.style.display = "none";
+      scoreBoardEl.display = "block";
+    } else {
+    }
   });
 }
+// function highScoreBoardPage(){
+
+//     scoreBoardEl.style.display= "block";
+// }
 
 // event listener for clicking answers
-choiceNode.addEventListener.onclick("click", function () {
-  quizQuestions();
-});
+// choiceNode.addEventListener.onclick("click", function () {
+//   quizQuestions();
+// });
 
 //FROM TUTOR!!!
 // choicesEl.innerHTML = "";

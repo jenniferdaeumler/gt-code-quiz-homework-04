@@ -1,42 +1,46 @@
-# 04 Web APIs: Code Quiz
+# Coding Quiz
+https://jenniferdaeumler.github.io/gt-code-quiz-homework-04/
+https://github.com/jenniferdaeumler/gt-code-quiz-homework-04
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
-## User Story
+## Table of Contents 
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
 
-## Acceptance Criteria
+## Description 
+I have created an application that generates a coding quiz. This app runs in the browser. The Javascript powers dynamic updates to the quiz based on user interaction. 
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
+## Installation
+Clone the repo, and run the files in browser. 
 
-The following animation demonstrates the application functionality:
+## Usage 
+If you would like to test your coding knowledge, just click the "begin quiz" button.  You will see a 60 second countdown timer in the right hand corner as the quiz begins.  Read the question, and click on the correct answer.  If you click an incorrect answer, the time decreaes by 15 seconds.  If timer runs out, the quiz is automatically over. When you finish the quiz, you will see your score.  Your score is the number of seconds left when you finished the quiz.  Type your name into the form, and click "submit".  You will then see the high score board.  You can compete against yourself, and try and beat your previous high score.  Clear the scoreboard if you wish.  You can choose to restart the quiz at that time too.  Good luck, and  have fun!  
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+Begin Quiz Screen
+<img src="https://i.imgur.com/hofVjyb.png?1">
+<br><br>
+One question from the quiz, along with timer in upper right corner.
+<img src="https://i.imgur.com/grZ5PG2.png?1">
+<br><br>
+Submit your name for the score board. 
+<img src="https://i.imgur.com/Rifw0ll.png?1">
 
-### Review
 
-You are required to submit the following for review:
 
-* The URL of the functional, deployed application.
+## Credits
+-Solo projected completed as homework for Georgia Tech Full-Stack Flex Program. 
+-Trilogy Education provided assets.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+## License
+Copyright (c) [2020] [Jennifer Daeumler]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -14,26 +14,6 @@
     /* nothing works here! */
   }
   
-  .btn-group-vertical {
-    object-position: center;
-    font-size: 18px;
-  }
-  #buttonOne {
-    background-color: purple;
-    color: white;
-  }
-  #buttonTwo {
-    background-color: purple;
-    color: white;
-  }
-  #buttonThree {
-    background-color: purple;
-    color: white;
-  }
-  #buttonFour {
-    background-color: purple;
-    color: white;
-  }
   
   #begin {
     display: block;
